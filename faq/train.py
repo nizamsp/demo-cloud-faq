@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     seed_everything(42, workers=True)
     faq_model = FAQModel()
-    train_path = os.path.join(DATA_DIR, "train_part.jsonl")
-    val_path = os.path.join(DATA_DIR, "val_part.jsonl")
+    train_path = os.path.join(DATA_DIR, "train_cloud_faq_dataset.jsonl.jsonl")
+    val_path = os.path.join(DATA_DIR, "val_cloud_faq_dataset.jsonl.jsonl")
     train(faq_model, train_path, val_path, {})
     faq_model.save_servable(os.path.join(ROOT_DIR, "servable"))
